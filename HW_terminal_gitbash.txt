@@ -1,0 +1,44 @@
+1) Посмотреть где я:    pwd
+2) Создать папку:    mkdir DZ_terminal
+3) Зайти в папку:    cd DZ_terminal
+4) Создать 3 папки:    mkdir directory_1 directory_2 directory_3
+5) Зайти в любую папку:    cd directory_1
+6) Создать 5 файлов (3 txt, 2 json):    touch file_1.txt file_2.txt file_3.txt file_4.json file_5.json 
+7) Создать 3 папки:    mkdir dir_1 dir_2 dir_3
+8) Вывести список содержимого папки:    ls -al
+9) Открыть любой txt файл:    vim file_1.txt
+10) Написать туда что-нибудь, любой текст (insert - клавиша "i"):    The lesson is devoted to the study of the Linux terminal.                
+11) Сохранить и выйти:    esc (SHIFT + :) wq
+12) Выйти из папки на уровень выше:    cd ..
+—
+13) Переместить любые 2 файла, которые вы создали, в любую другую папку:    mv {directory_1/file_1.txt,directory_1/file_2.txt} directory_1/dir_1/
+14) Скопировать любые 2 файла, которые вы создали, в любую другую папку:    cp {directory_1/file_4.json,directory_1/file_3.txt} directory_1/dir_2/
+15) Найти файл по имени (поиск начинается с папки, в которой находимся на данный момент):    find . -name file_1.txt
+16) Просмотреть содержимое в реальном времени:   tail -f directory_1/dir_1/file_1.txt 
+17) Вывести несколько первых строк из текстового файла:    head -n4 directory_1/dir_1/file_1.txt (выведет первые 4 строки файла)
+18) Вывести несколько последних строк из текстового файла:     tail -n4 directory_1/dir_1/file_1.txt (выведет последние 4 строки файла)
+19) Просмотреть содержимое длинного файла:    less directory_1/dir_1/file_2.txt
+20) Вывести дату и время: date
+
+Задание *
+1) Отправить http-запрос на сервер:    1) curl "http://162.55.220.72:5005/terminal-hw-request";  2) curl "http://162.55.220.72:5005/get_method?name="Alesia"&age=23"
+
+2) Написать скрипт, который автоматически выполнит пункты 3, 4, 5, 6, 7, 8, 13
+	- Создать текстовый файл touch script.sh
+	- Открыть файл vim script.sh
+	- Прописать в файле следующее содержимое:
+		#!/bin/bash
+		mkdir hwork_gitbash;
+		cd hwork_gitbash;
+		mkdir folder_1 folder_2 folder_3;
+		cd folder_1;
+		touch f1.txt f2.txt f3.txt f4.json f5.json;
+		mkdir gitbash_1 gitbash_2 gitbash_3;
+		ls -la;
+		mv {f1.txt,f2.txt} gitbash_1/;
+	- Сохраняем файл    esc (SHIFT+ :) wq
+	- Делаем файл исполняемым    chmod +x ./script.sh
+	- Запуск скрипта    ./script.sh
+
+
+           
